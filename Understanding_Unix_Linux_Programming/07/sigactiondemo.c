@@ -46,6 +46,6 @@ int main(int argc, char *argv[])
 void inthandler(int s)
 {
     printf("Called with signal %d\n", s);
-	sleep(s);
+	sleep(2);
 	printf("done handling signal %d\n", s);
 }

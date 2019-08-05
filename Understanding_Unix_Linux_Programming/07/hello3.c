@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
 		{
 		    standend();
 		}
-		sleep(1);
 		refresh();
+		sleep(1);
 	}
 
 	endwin();                         /* turn off curses */

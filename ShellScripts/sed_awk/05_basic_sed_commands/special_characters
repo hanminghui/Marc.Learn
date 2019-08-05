@@ -1,0 +1,5 @@
+# use list command to show invisible characters
+# also can be show in vim by :l
+# use control-v to insert in vim insert mode
+Here is a string of special characters:    
+This is Escape: 

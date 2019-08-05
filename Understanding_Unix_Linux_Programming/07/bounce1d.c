@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	row   = 10;  /* start here          */
 	col   = 0;
 	dir   = 1;   /* add 1 to row number */
-	delay = 200; /* 200ms = 0.2 seconds */
+	delay = 200; /* 100ms = 0.1 seconds */
 
 	move(row, col); /* get into position */
 	addstr(MESSAGE); /* draw message */

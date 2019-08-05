@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
 	clear();                          /* clear screen */
 	move(10,20);                      /* row10, col20 */
-	standout();
+	standout();                       /* reverse mode */
 	addstr("Hello, world");           /* add a string */
 	move(LINES-1, 0);                 /* move to LL   */
 

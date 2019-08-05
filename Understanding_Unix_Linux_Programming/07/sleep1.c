@@ -8,7 +8,7 @@
 #include <signal.h>
 #include <unistd.h>
 
-#define SHHHH
+// #define SHHHH
 
 int main(int argc, char *argv[])
 {

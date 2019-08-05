@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	signal(SIGQUIT, quithandler);            /* set handler */
 	do
 	{
-		printf("\nType a message\n");
+		printf("\nType a message (input quit to quit)\n");
 		nchars = read(0, input, (INPUTLEN-1));
 		if(nchars == -1)
 			perror("read returned an error");
