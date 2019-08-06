@@ -1,0 +1,30 @@
+ls -l $* | \
+awk '
+# filesum list files and total size in bytes
+# input long listing produced by "ls -l"
+
+# 1 output column headers
+BEGIN { print "BYTES" "\t" "NAME" }
+BEGIN { print "==============================" }
+
+# 2 test for 9 fields; files begin with "-"
+NF == 9 && /^-/ {
+	print $5 "\t" $9
+	filenum += 1
+	totalsize += $5
+}
+
+# 3 test for 9 fields; directory begin with "d"
+NF == 9 && /^d/ {
+	print "<dir>\t" $9
+}
+
+# 4 test for ls -lR line ./dir:
+$1 ~ /^\..*:$/ {
+	print "\t" $0
+}
+
+# 5 once all is done
+END { print "==============================" }
+END { print "totalsize: " totalsize " bytes (" filenum " files)"}
+'
